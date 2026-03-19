@@ -1,17 +1,17 @@
-/* Desktop: make home ad banner full viewport width */
+/* Desktop: constrain home ad banner to container */
 @media screen and (min-width: 769px) {
-    body {
-        overflow-x: hidden;
-    }
     .module_home_ads {
-        width: 100vw;
-        margin-left: calc(50% - 50vw);
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
     }
     .module_home_ads img,
     .module_home_ads iframe,
     .module_home_ads > * {
         width: 100%;
         max-width: 100%;
+        max-height: 200px;
+        object-fit: cover;
         display: block;
     }
 }
